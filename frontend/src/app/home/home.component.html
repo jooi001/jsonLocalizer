@@ -1,4 +1,18 @@
-<div>
-  <h1>Welcome to Angular-Flask App</h1>
-  <p>Message from Flask: {{ message }}</p>
-</div>
+  <div class="home-container">
+    <div class="file-container">
+      <h1>JSON English to Japanese Translator</h1>
+
+      <div class="file-container-upload">
+        <h2>Upload a File</h2>
+        <input type="file" (change)="getFile($event)" class="file" />
+      </div>
+
+      <div class="file-container-buttons">
+        <div *ngIf="file">
+          File name: {{ file.name }} <br />
+          <button (click)="file = null"> clear file</button>
+        </div><br />
+        <button (click)="uploadFile()"> upload file</button>
+      </div>
+    </div>
+  </div>

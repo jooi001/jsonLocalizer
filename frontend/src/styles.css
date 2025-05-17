@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background: linear-gradient(to bottom, pink, red);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: "Poiret One", sans-serif;
+
+    display: flex;
+    justify-content: center;
+    /* Horizontal center */
+    align-items: flex-start;
+    /* Aligns container near the top */
+    padding-top: 5%;
+    /* Adjust this to control how far from the top */
+    margin: 0;
+}

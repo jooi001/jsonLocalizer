@@ -1,11 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-home',
-  imports: [],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+  message: string = '';
 
+  constructor(private apiService: ApiService) { }
+
+  ngOnInit(): void {
+    this.apiService.getMessage().subscribe(
+      (data) => {
+        this.message = data.message;
+      },
+      (error) => {
+        console.error('Error fetching message:', error);
+      }
+    );
+  }
 }

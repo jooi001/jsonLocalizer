@@ -6,11 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  private apiUrl = 'http://localhost:3000/api';
+  private apiUrl = 'http://localhost:5000/api';
 
   constructor(private http: HttpClient) { }
 
-  getData(): Observable<any> {
-    return this.http.get(`${this.apiUrl}/data`);
+  // Add proper type for the response
+  getMessage(): Observable<{ message: string }> {
+    return this.http.get<{ message: string }>(`${this.apiUrl}/message`);
   }
 }

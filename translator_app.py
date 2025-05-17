@@ -19,7 +19,7 @@ translate_transformers('I love ice cream')
 print(translation_pipeline_ENJP("I love programming!")[0]['translation_text'])
 
 interface = gr.Interface(fn=translate_transformers,
-            inputs=gr.Textbox(lines=2, placeholder='Text to translate'),
-            outputs='text')
+    inputs=gr.Textbox(lines=2, placeholder='Text to translate'),
+    outputs='text')
 
 interface.launch()

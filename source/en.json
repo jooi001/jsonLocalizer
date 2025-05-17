@@ -1,0 +1,28 @@
+{
+        "menu": {
+                "title": "Menu",
+                "description": "Main menu options",
+                "audio": {
+                        "title": "Audio",
+                        "description": "Audio settings",
+                        "volume": {
+                                "title": "Volume",
+                                "description": "Adjust the volume level",
+                                "level": 10
+                        },
+                        "mute": {
+                                "title": "Mute",
+                                "description": "Toggle mute on/off",
+                                "toggle": false
+                        }
+                },
+                "controls": {
+                        "title": "Controls",
+                        "description": "Control settings"
+                },
+                "return": {
+                        "title": "Return",
+                        "description": "Return to the previous menu"
+                }
+        }
+}
